@@ -1,0 +1,19 @@
+{
+  "name": "jwordcloud",
+  "version": "1.0.2",
+  "description": "A 3D JavaScript Plugin",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/MR4AM/JWordCloud.git"
+  },
+  "author": "jason",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MR4AM/JWordCloud/issues"
+  },
+  "homepage": "https://github.com/MR4AM/JWordCloud#readme"
+}
