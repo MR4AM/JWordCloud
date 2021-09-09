@@ -216,7 +216,7 @@
           itemEl.style.color = colors.length > 0 ? (colors[index] ? colors[index] : colors[colors.length - 1]) : '#0366d6';
         }
         // 根据数据大小计算字体大小
-        itemEl.style.fontSize = self.config.fontSize * self.wordValuesList[index]/averageFn(self.wordValuesList) < 12 ? 12 : self.config.fontSize * self.wordValuesList[index]/averageFn(self.wordValuesList) + 'px';
+        itemEl.style.fontSize = self.config.fontSize * self.wordValuesList[index]/averageFn(self.wordValuesList) < 12 ? 12 : (self.config.fontSize * self.wordValuesList[index]/averageFn(self.wordValuesList)>60?60:self.config.fontSize * self.wordValuesList[index]/averageFn(self.wordValuesList)) + 'px';
         itemEl.innerText = text;
         return _objectSpread2({
           el: itemEl
