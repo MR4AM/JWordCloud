@@ -1,7 +1,7 @@
 /*!
  * JWordCloud.js
- * created by Cong Min
- * update by jason in 2021/09/09
+ * created by Cong Min https://github.com/mcc108/TagCloud
+ * updated by jason in 2021/09/09 https://github.com/MR4AM/JWordCloud
  * 
  */
 (function (global, factory) {
@@ -99,13 +99,16 @@
     return target;
   }
 
-  /**
-   * JWordCloud.js (c) 2016-2019 @ Cong Min
-   * MIT License - https://github.com/mcc108/JWordCloud
-   */
+  /*!
+  * JWordCloud.js
+  * created by Cong Min https://github.com/mcc108/TagCloud
+  * updated by jason in 2021/09/09 https://github.com/MR4AM/JWordCloud
+  * 
+  */
   var JWordCloud = /*#__PURE__*/function () {
     /* constructor */
     function JWordCloud() {
+      console.log('感谢使用JWordCloud, 如果觉得好用，给个star！ https://github.com/MR4AM/JWordCloud');
       var container = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : document.body;
       var texts = arguments.length > 1 ? arguments[1] : undefined;
       var options = arguments.length > 2 ? arguments[2] : undefined;
@@ -192,7 +195,6 @@
         itemEl.className = self.config.itemClass;
         var colors = self.config.colors || [];
         var averageFn = function (arr) { return arr.reduce((acc, val) => acc + val, 0) / arr.length };
-        console.log(colors,self.wordValuesList,averageFn(self.wordValuesList));
         if (self.config.useItemInlineStyles) {
           itemEl.style.willChange = 'transform, opacity, filter';
           itemEl.style.position = 'absolute';
