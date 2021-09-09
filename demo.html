@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>JWordCloud</title>
+    <style>
+        .content {
+            background: rgba(0,0,0,0.9);
+            height: 100%;
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+  
+    <div class="content"></div>
+    <script type="text/javascript" src="./JWordCloud.js"></script>
+    <script>
+        var words = {
+            'JWordCloud': 101,
+            '3d':42,
+            'JavaScript': 23,
+            'CSS3':45,
+            'Animation': 109,
+            'React': 56,
+            'Vue': 78,
+            'Jvue': 107,
+            'App': 118,
+            'Web': 109,
+            'Html5': 67,
+            'Java': 69
+        }
+        var wordCloud = new JWordCloud('.content', words, {
+            // 词云渲染区域大小
+            radius: 300,
+            // 词云动画速度模式 slow, normal, fast
+            maxSpeed: 'normal',
+            initSpeed: 'normal',
+            // 词云颜色板
+            colors: ['red','blue','orange','green','purple', 'yellow','skyblue','#673ab7','#3f51b5','#ff5722','#607d8b'],
+            // 词云标准值字体大小
+            fontSize: 28
+        });
+    </script>
+</body>
+
+</html>
