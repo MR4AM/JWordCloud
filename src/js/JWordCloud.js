@@ -194,7 +194,11 @@
         var itemEl = document.createElement('span');
         itemEl.className = self.config.itemClass;
         var colors = self.config.colors || [];
-        var averageFn = function (arr) { return arr.reduce((acc, val) => acc + val, 0) / arr.length };
+        var median = function (arr) {
+          const mid = Math.floor(arr.length / 2),
+            nums = [...arr].sort((a, b) => a - b);
+          return arr.length % 2 !== 0 ? nums[mid] : (nums[mid - 1] + nums[mid]) / 2;
+        };
         if (self.config.useItemInlineStyles) {
           itemEl.style.willChange = 'transform, opacity, filter';
           itemEl.style.position = 'absolute';
@@ -216,7 +220,7 @@
           itemEl.style.color = colors.length > 0 ? (colors[index] ? colors[index] : colors[colors.length - 1]) : '#0366d6';
         }
         // 根据数据大小计算字体大小
-        itemEl.style.fontSize = self.config.fontSize * self.wordValuesList[index]/averageFn(self.wordValuesList) < 12 ? 12 : (self.config.fontSize * self.wordValuesList[index]/averageFn(self.wordValuesList)>60?60:self.config.fontSize * self.wordValuesList[index]/averageFn(self.wordValuesList)) + 'px';
+        itemEl.style.fontSize = self.config.fontSize * self.wordValuesList[index]/median(self.wordValuesList) < self.config.minFontSize ? self.config.minFontSize : (self.config.fontSize * self.wordValuesList[index]/median(self.wordValuesList)>self.config.maxFontSize?self.config.maxFontSize:self.config.fontSize * self.wordValuesList[index]/median(self.wordValuesList)) + 'px';
         itemEl.innerText = text;
         return _objectSpread2({
           el: itemEl
@@ -455,7 +459,9 @@
     useContainerInlineStyles: true,
     useItemInlineStyles: true,
     containerClass: 'JWordcloud',
-    itemClass: 'JWordcloud--item'
+    itemClass: 'JWordcloud--item',
+    minFontSize: 12,
+    maxFontSize: 60
   };
 
   JWordCloud._getMaxSpeed = function (name) {
