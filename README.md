@@ -1,6 +1,6 @@
 # JWordCloud
-- 1.3D JavaScript 词云,可自定义词云词语颜色和自带3d环绕效果
-- 2.欢迎使用JWordCloud, 如果觉得好用，给个star！
+- 3D JavaScript 词云,可自定义词云词语颜色和自带3d环绕效果
+- 欢迎使用JWordCloud, 如果觉得好用，给个star！
 
 ## 如何使用JWordCloud
 - 1.引入JWordCloud.js
@@ -36,4 +36,4 @@
       });
   </script>
 ```
-![image](http://www.jasonlee.top/public/webs/wordCloud.gif)
+![图片](http://www.jasonlee.top/public/webs/wordCloud.gif)
