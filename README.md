@@ -36,4 +36,4 @@
       });
   </script>
 ```
-![图片](http://www.jasonlee.top/public/webs/wordCloud.gif)
+[最终效果](http://www.jasonlee.top/public/webs/wordCloud.gif)
