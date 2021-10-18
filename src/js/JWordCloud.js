@@ -369,7 +369,7 @@
       value: function update(texts) {
         var self = this; // params
 
-        self.texts = texts || []; // judging and processing items based on texts
+        self.texts = Object.keys(texts) || []; // judging and processing items based on texts
 
         self.texts.forEach(function (text, index) {
           var item = self.items[index];
